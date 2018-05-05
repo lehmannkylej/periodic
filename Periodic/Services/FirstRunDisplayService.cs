@@ -19,6 +19,12 @@ namespace Periodic.Services
                 var dialog = new FirstRunDialog();
                 await dialog.ShowAsync();
             }
+            else
+            {
+                shown = true;
+                var dialog = new FirstRunDialog();
+                await dialog.ShowAsync();
+            }
         }
     }
 }

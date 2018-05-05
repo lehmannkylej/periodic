@@ -7,22 +7,21 @@
     mc:Ignorable="d"
     d:DesignHeight="345"
     d:DesignWidth="550"
-    PrimaryButtonText="Ok">
+    PrimaryButtonText="Done!">
     <ContentDialog.TitleTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal">
-                <Image Source="ms-appx:///Assets/StoreLogo.png" Width="40" Height="40" Margin="0"/>
-                <TextBlock x:Uid="FirstRun_Title" Text="Welcome" Margin="10,5,0,0"/>
+                <Image Source="ms-appx:///Assets/AppLogo.svg" Width="40" Height="40" Margin="0"/>
+                <TextBlock Text="Hello" Margin="10,5,0,0"/>
             </StackPanel>
         </DataTemplate>
     </ContentDialog.TitleTemplate>
     <ScrollViewer>
-        <StackPanel>
-            <TextBlock x:Uid="FirstRun_Body" TextWrapping="WrapWholeWords">
-                <Run>Replace the content of this dialog with whatever content is appropriate to your app.</Run><LineBreak/>
-                <Run>You might want to explain key features or functionality.</Run><LineBreak/>
-                <Run>Don't feel restricted to just text. You can also include images and animations if you wish too.</Run>
+        <StackPanel ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <TextBlock TextWrapping="WrapWholeWords">
+                <Run>Welcome to Periodic, the app that helps you create Routines to organize the reoccurring tasks in your daily life. We need to set up a few things first.</Run>
             </TextBlock>
+            <TextBox x:Name="Username" Header= "Let's start with your name." PlaceholderText="Your Name" Margin="0,12,0,0" MaxLength="320" MaxWidth="500" MinWidth="300" HorizontalAlignment="Left" InputScope="Default"/>
         </StackPanel>
     </ScrollViewer>
 </ContentDialog>

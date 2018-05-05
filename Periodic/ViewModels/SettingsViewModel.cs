@@ -67,7 +67,7 @@ namespace Periodic.ViewModels
             var packageId = package.Id;
             var version = packageId.Version;
 
-            return $"{package.DisplayName} - {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
+            return $"{package.DisplayName} - {version.Major}.{version.Minor}.{version.Build}";
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿<ContentDialog 
+    x:Class="Periodic.Views.FirstRunDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="345"
+    d:DesignWidth="550"
+    PrimaryButtonText="Done!">
+    <ContentDialog.TitleTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="ms-appx:///Assets/AppLogo.svg" Width="40" Height="40" Margin="0"/>
+                <TextBlock Text="Hello" Margin="10,5,0,0"/>
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.TitleTemplate>
+    <ScrollViewer>
+        <StackPanel ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <TextBlock TextWrapping="WrapWholeWords">
+                <Run>Welcome to Periodic, the app that helps you create Routines to organize the reoccurring tasks in your daily life. We need to set up a few things first.</Run>
+            </TextBlock>
+            <TextBox x:ConnectionId='1' x:Name="Username" Header= "Let's start with your name." PlaceholderText="Your Name" Margin="0,12,0,0" MaxLength="320" MaxWidth="500" MinWidth="300" HorizontalAlignment="Left" InputScope="Default"/>
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>
+
